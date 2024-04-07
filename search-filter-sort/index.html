@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Search-filter-sort</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <img src="FullLogo.png" class="logo-icon" />
+          <div class="search-box">
+            <img src="search.svg" class="search-icon" />
+            <input type="search" id="search-input" placeholder="Search Items" />
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main">
+      <div class="filter-box">
+        <button class="active" value="all">All</button>
+        <button value="topwear">Top Wear</button>
+        <button value="bottomwear">Bottom Wear</button>
+        <button value="footwear">Foot Wear</button>
+        <button value="accessories">Accessories</button>
+      </div>
+      <div id="content-box"></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
