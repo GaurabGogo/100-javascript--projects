@@ -60,6 +60,7 @@ const container = document.getElementById("content-box");
 const filterBox = document.querySelector(".filter-box");
 const searchIcon = document.querySelector(".search-icon");
 const searchItem = document.getElementById("search-input");
+const sortType = document.getElementById("sortType");
 
 let newData = data;
 let searchData = newData;
@@ -93,6 +94,20 @@ searchItem.addEventListener("input", function (e) {
     });
   }
   filterData(searchData);
+});
+
+sortType.addEventListener("change", function (e) {
+  let [type, dir] = e.target.value.split("-");
+  switch (type) {
+    case "price":
+      if (dir == "asc") {
+        let sortedData = newData.sort((a, b) => a.price - b.price);
+      } else {
+        sortedData = newData.sort((a, b) => b.price - a.price);
+      }
+      break;
+  }
+  filterData(sortedData);
 });
 
 function filterData(newData) {

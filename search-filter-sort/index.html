@@ -21,12 +21,18 @@
     </header>
 
     <main class="container main">
-      <div class="filter-box">
-        <button class="active" value="all">All</button>
-        <button value="topwear">Top Wear</button>
-        <button value="bottomwear">Bottom Wear</button>
-        <button value="footwear">Foot Wear</button>
-        <button value="accessories">Accessories</button>
+      <div class="option-box">
+        <div class="filter-box">
+          <button class="active" value="all">All</button>
+          <button value="topwear">Top Wear</button>
+          <button value="bottomwear">Bottom Wear</button>
+          <button value="footwear">Foot Wear</button>
+          <button value="accessories">Accessories</button>
+        </div>
+        <select id="sortType">
+          <option value="price-asc">Price - low to high</option>
+          <option value="price-dec">Price - high to low</option>
+        </select>
       </div>
       <div id="content-box"></div>
     </main>
