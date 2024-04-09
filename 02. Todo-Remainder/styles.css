@@ -21,6 +21,14 @@ body {
   border-radius: 4px;
   padding: 1.2rem;
   width: 400px;
+  position: relative;
+}
+
+.sound {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 4px 8px;
 }
 
 .app-name {
@@ -31,7 +39,7 @@ body {
 .app-name::after {
   content: "";
   height: 2px;
-  width: 40%;
+  width: 60%;
   background-color: black;
   position: absolute;
   bottom: 0;
@@ -53,6 +61,7 @@ body {
   padding: 1.2rem;
   width: 400px;
   height: 400px;
+  overflow-y: scroll;
 }
 
 .form-box {
@@ -68,10 +77,6 @@ body {
   display: none;
 }
 
-.toggle {
-  display: block;
-}
-
 .form-btn {
   margin-top: 1.2rem;
   display: flex;
@@ -84,4 +89,57 @@ body {
   padding: 4px 8px;
   border: none;
   width: 100%;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.list-item {
+  background-color: #eee;
+  padding: 4px 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.list-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.list-check-box {
+  margin: 6px;
+}
+
+.del-btn {
+  padding: 4px 8px;
+}
+
+.edit-btn {
+  padding: 4px 8px;
+}
+
+.list-title {
+  font-size: 12px;
+}
+
+.list-rem {
+  font-size: 8px;
+  font-style: italic;
+}
+
+.item-checked-effect {
+  opacity: 0.6;
+}
+
+.hide {
+  display: none;
+}
+
+.toggle {
+  display: block;
 }
