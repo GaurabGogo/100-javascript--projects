@@ -79,6 +79,7 @@ submitForm.addEventListener("click", function (e) {
 });
 
 function renderList(taskList) {
+  localStorage.setItem("list", JSON.stringify(taskList));
   listItems.classList.remove("hide");
   listItems.innerHTML = "";
   taskList.map((item, i) => {
@@ -137,8 +138,6 @@ function renderList(taskList) {
     listItem.appendChild(delBtn);
 
     listItems.appendChild(listItem);
-
-    localStorage.setItem("list", JSON.stringify(taskList));
   });
 }
 
@@ -219,5 +218,5 @@ function remainder() {
         }
       }
     });
-  }, 1000);
+  }, 15000);
 }
