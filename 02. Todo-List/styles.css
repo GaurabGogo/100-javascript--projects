@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.todo-box {
+  background-color: blue;
+  border-radius: 4px;
+  padding: 1.2rem;
+  width: 400px;
+}
+
+.app-name {
+  text-align: center;
+  position: relative;
+}
+
+.app-name::after {
+  content: "";
+  height: 2px;
+  width: 40%;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.add-btn {
+  margin-top: 1.2rem;
+  padding: 4px 8px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.list-box {
+  background-color: blue;
+  border-radius: 4px;
+  padding: 1.2rem;
+  width: 400px;
+  height: 400px;
+}
+
+.form-box {
+  display: none;
+  height: 100%;
+}
+
+.task-name {
+  width: 100%;
+}
+
+.remainder-box {
+  display: none;
+}
+
+.toggle {
+  display: block;
+}
+
+.form-btn {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 4px 8px;
+  border: none;
+  width: 100%;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo-List with Push Notification</title>
+  </head>
+  <body>
+    <!-- <button id="btn">click</button> -->
+    <header class="todo-box">
+      <h2 class="app-name">Todo-List</h2>
+      <div class="add-box">
+        <button class="add-btn">Add a new task</button>
+      </div>
+    </header>
+    <main class="list-box">
+      <form class="form-box">
+        <label for="task">Enter the Task</label>
+        <textarea
+          type="textbox"
+          id="task"
+          class="task-name"
+          placeholder="Enter the task!"
+        ></textarea>
+        <div>
+          <input
+            id="remainder"
+            type="checkbox"
+            value="remainder"
+            name="remainder"
+          />
+          <label for="remainder" class="remainder">Turn on Remainder</label>
+        </div>
+        <div class="remainder-box">
+          <label for="date">Select a date:</label>
+          <input type="date" id="date" name="date" /><br />
+          <label for="time">Select a time:</label>
+          <input type="time" id="time" name="time" />
+        </div>
+
+        <div class="form-btn">
+          <button class="cancel-btn btn">Cancel</button>
+          <button type="submit" class="submit-btn btn">Add</button>
+        </div>
+      </form>
+      <div class="list-items"></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
