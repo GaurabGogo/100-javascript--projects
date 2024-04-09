@@ -24,7 +24,10 @@ let list = [
   // },
 ];
 
-let newList;
+let itemsArray = localStorage.getItem("list")
+  ? JSON.parse(localStorage.getItem("list"))
+  : [];
+list = itemsArray;
 
 window.onload = renderList(list);
 window.onload = remainder();
@@ -134,6 +137,8 @@ function renderList(taskList) {
     listItem.appendChild(delBtn);
 
     listItems.appendChild(listItem);
+
+    localStorage.setItem("list", JSON.stringify(taskList));
   });
 }
 
@@ -188,7 +193,14 @@ function remainder() {
           if (item.remainder && !item.checked) {
             // console.log("congrats");
 
-            let notification = new Notification("Example Notification", {});
+            let notification = new Notification("Todo-Remainder", {
+              body: `${item.title} at ${item.time}`,
+              icon: "https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f47d.svg",
+              image:
+                "https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/1f4a2.svg",
+              tag: item.id,
+              vibrate: [300, 200, 400],
+            });
 
             audio = new Audio(
               "http://commondatastorage.googleapis.com/codeskulptor-assets/Evillaugh.ogg"
