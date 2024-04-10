@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-number {
+  height: 160px;
+  width: 160px;
+  font-size: 48px;
+  background-color: #333;
+  border-bottom: 12px solid black;
+  color: #eee;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

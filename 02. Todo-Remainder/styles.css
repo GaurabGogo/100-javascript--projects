@@ -95,6 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
 }
 
 .list-item {
@@ -102,13 +103,17 @@ body {
   padding: 4px 8px;
   display: flex;
   gap: 6px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .list-detail {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 100%;
+  margin-right: auto;
+  min-width: 75%;
 }
 
 .list-check-box {
@@ -124,6 +129,7 @@ body {
 }
 
 .list-title {
+  word-wrap: break-word;
   font-size: 12px;
 }
 

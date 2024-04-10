@@ -185,9 +185,15 @@ function remainder() {
   const myInterval = setInterval(function (e) {
     list.map((item, index) => {
       if (!item.checked && item.date !== "null") {
-        let dateNow = new Date().toJSON().slice(0, 10);
+        // let dateNow = new Date().toJSON().slice(0, 10);
+        let dateNow = new Date();
+        let date = dateNow.getDate();
+        if (date < 10) date = "0" + date;
+        let month = dateNow.getMonth() + 1;
+        if (month < 10) month = "0" + month;
+        let year = dateNow.getFullYear();
+        dateNow = year + "-" + month + "-" + date;
         let timeNow = new Date().toTimeString().slice(0, 5);
-        // console.log(dateNow);
         if (dateNow === item.date && timeNow === item.time) {
           if (item.remainder && !item.checked) {
             // console.log("congrats");
@@ -218,5 +224,5 @@ function remainder() {
         }
       }
     });
-  }, 15000);
+  }, 10000);
 }
